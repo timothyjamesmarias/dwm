@@ -10,7 +10,7 @@ makedepends=(git)
 depends=(freetype2 libx11 libxft)
 optdepends=(
 	'dmenu: program launcher'
-	'st: terminal emulator')
+	)
 provides=($_pkgname)
 conflicts=($_pkgname)
 source=(git+https://github.com/LukeSmithxyz/dwm)

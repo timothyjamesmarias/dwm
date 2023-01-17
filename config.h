@@ -16,13 +16,13 @@ static int swallowfloating    = 0;        /* 1 means swallow floating windows by
 static int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
-static char *fonts[]          = { "ubuntumono:size=14", "NotoColorEmoji:pixelsize=14:antialias=true:autohint=true"  };
-static char normbgcolor[]           = "#222222";
-static char normbordercolor[]       = "#444444";
-static char normfgcolor[]           = "#bbbbbb";
-static char selfgcolor[]            = "#eeeeee";
-static char selbordercolor[]        = "#baace2";
-static char selbgcolor[]            = "#16171e";
+static char *fonts[]          = { "iosevka:size=14", "NotoColorEmoji:pixelsize=14:antialias=true:autohint=true"  };
+static char normbgcolor[]           = "#282a36";
+static char normbordercolor[]       = "#bd93f9";
+static char normfgcolor[]           = "#6272a4";
+static char selfgcolor[]            = "#f8f8f2";
+static char selbordercolor[]        = "#ff79c6";
+static char selbgcolor[]            = "#44475a";
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
@@ -191,7 +191,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_s,		togglesticky,	{0} },
 	{ MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("slack") },
 	{ MODKEY,			XK_d,		spawn,          {.v = (const char*[]){ "dmenu_run", NULL } } },
-	{ MODKEY|ShiftMask,		XK_d,		spawn,		{.v = (const char*[]){ "passmenu", NULL } } },
+	{ MODKEY|ShiftMask,		XK_d,		spawn,		SHCMD("discord") },
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
 	{ MODKEY|ShiftMask,		XK_f,		setlayout,	{.v = &layouts[8]} },
 	{ MODKEY,			XK_g,		shiftview,	{ .i = -1 } },
